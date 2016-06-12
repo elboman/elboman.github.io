@@ -2,20 +2,17 @@
 layout: layout
 ---
 
-<div class="container">
+<div class="post-wrapper">
 	<div class="blog-post">
-		<h3>
+		<h1 class="center">
 		  <strong><a href="{{ page.url }}">{{ page.title }}</a></strong>
-		</h3>
+	  	</h1>
 	</div>
 	<div class="blog-title">
-		<h4>
+		<h5 class="center"><small>
 		{{ page.date | date: "%B %e, %Y" }}
 			&nbsp;&nbsp;
-			{% for tag in page.tags %}
-			 <span class="label label-success">{{ tag }}</span>
-			{% endfor %}
-		</h4>
+		</small></h5>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-body">
