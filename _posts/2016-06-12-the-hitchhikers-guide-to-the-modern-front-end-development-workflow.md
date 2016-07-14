@@ -132,7 +132,7 @@ Choosing which one to use is also a difficult task, each one has its ups and dow
 
 As already said before, transpiling code is necessary if you consider to use ES6, TypeScript, CoffeScript or any other language meant for the front end. Since these languages cannot be understood and ran by the browsers, **you need to transform them to standard ES5**.
 
-Since ES6 is an approved version of the JavaScript language, it's the only one that is getting support by the modern browsers. By the time of this writing, every major [browser supports 90%+ of ES6]((https://kangax.github.io/compat-table/es6/)) syntax in their latest/beta version. They point is, contrary to languages like TypeScript / CoffeScript, **eventually ES6** (and the new version to come each year) **will be fully supported** and you will be able to skip the transpiling step.
+Since ES6 is an approved version of the JavaScript language, it's the only one that is getting support by the modern browsers. By the time of this writing, every major [browser supports 90%+ of ES6](https://kangax.github.io/compat-table/es6/) syntax in their latest/beta version. They point is, contrary to languages like TypeScript / CoffeScript, **eventually ES6** (and the new version to come each year) **will be fully supported** and you will be able to skip the transpiling step.
 
 In practice, what you want to do is to add a step in the module bundler by tying up the transpiler. [Babel](https://babeljs.io/) is de-facto solution for ES6 transpilation by [Sebastian McKenzie](https://twitter.com/sebmck), and it even supports the JSX syntax used in React.
 For me this is where most magic happens. This tool is so great that every JavaScript Engineer in Facebook use it. **You really gotta thank this guy**.
