@@ -1,3 +1,5 @@
+$small-media: "screen and (max-width: 600px)";
+
 $bg-color: #e6e6e6;
 
 body {
@@ -78,6 +80,10 @@ $avatar-size: 140px;
     overflow: hidden;
 }
 
+.container {
+    width: 100%;
+}
+
 .main-menu {
     margin-top: 60px;
     background-color: #fbfbfb;
@@ -92,6 +98,14 @@ $avatar-size: 140px;
     padding: 60px 55px 30px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    @media #{$small-media} {
+        padding: 60px 30px 30px;
+    }
+}
+
+section.post:not(:last-child) {
+    margin-bottom: 60px;
 }
 
 .post__header h3 {
