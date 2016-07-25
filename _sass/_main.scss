@@ -161,3 +161,21 @@ section.post:not(:last-child) {
     color: #636363;
     font-size: 20px;
 }
+
+.img-right {
+    width: 33%;
+    float: right;
+    margin-left: 10%;
+    @media #{$small-media} {
+        width: 50%;
+    }
+}
+
+.img-left {
+    width: 33%;
+    float: left;
+    margin-right: 10%;
+    @media #{$small-media} {
+        width: 50%;
+    }
+}
