@@ -13,9 +13,9 @@ sass:
 # edit here to achieve your personal greatness
 url: "http://marcobotto.com"
 baseurl: "/"
-title: Marco Botto
+title: "Marco Botto: JavaScript/ES6, React and Angular enthusiast"
 author: Marco Botto
-description: Personal blog
+description: "Articles on JavaScript/ES6, React and Angular."
 avatar: profile.jpg
 email: info@marcobotto.com
 github: elboman # username
