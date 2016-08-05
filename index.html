@@ -20,7 +20,7 @@ layout: home
 		<div class="post__button center">
 			<a href="{{ post.url }}" class="button" title="Read {{ post.title }}">
 				Continue reading
-				<img class="continue-reading-icon" src="{{ site.baseurl }}static/img/icons/next.svg" alt="{{ post.title }}">
+				<img class="continue-reading-icon" src="{{ site.baseurl }}/static/img/icons/next.svg" alt="{{ post.title }}">
 			</a>
 		</div>
 	</section>
@@ -33,11 +33,11 @@ layout: home
 		<li id="pagination-prev">
 			{% if paginator.previous_page %}
 			<a class="pagination-button" href="{{ paginator.previous_page_path }}">
-				<img src="{{ site.baseurl }}static/img/icons/prev.svg" alt="">
+				<img src="{{ site.baseurl }}/static/img/icons/prev.svg" alt="">
 			</a>
 			{% else %}
 			<span>
-				<img src="{{ site.baseurl }}static/img/icons/prev.svg" alt="">
+				<img src="{{ site.baseurl }}/static/img/icons/prev.svg" alt="">
 			</span>
 			{% endif %}
 		</li>
@@ -61,11 +61,11 @@ layout: home
 		<li id="pagination-next">
 			{% if paginator.next_page %}
 			<a class="pagination-button" href="{{ paginator.next_page_path }}">
-				<img src="{{ site.baseurl }}static/img/icons/next.svg" alt="">
+				<img src="{{ site.baseurl }}/static/img/icons/next.svg" alt="">
 			</a>
 			{% else %}
 			<span>
-				<img src="{{ site.baseurl }}static/img/icons/next.svg" alt="">
+				<img src="{{ site.baseurl }}/static/img/icons/next.svg" alt="">
 			</span>
 			{% endif %}
 		</li>

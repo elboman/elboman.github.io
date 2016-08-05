@@ -1,31 +1,28 @@
-# top level stuff you probably don't need to touch
-highlighter: rouge
-markdown: kramdown
-permalink: /:year/:month/:title
-paginate: 5
-gems: [jekyll-paginate]
-port: 3000
-safe: true
-sass:
-    compressed: true
-
-
-# edit here to achieve your personal greatness
-url: "http://marcobotto.com"
-baseurl: "/"
+# Site config
 title: "Marco Botto: JavaScript/ES6, React and Angular enthusiast"
-author: Marco Botto
 description: "Articles on JavaScript/ES6, React and Angular."
-avatar: profile.jpg
+author: Marco Botto
 email: info@marcobotto.com
-github: elboman # username
+url: "http://marcobotto.com"
+baseurl: ""
+
+# Sites config
+github: elboman
 twitter: elboman
 linkedin: elboman
-#stackoverflow: elboman   #e.g: users/2735833/proton1h1
-#Comment out if you don't want disqus
 disqus: marcobotto
 google_analytics: UA-71636045-1
 
+# Jekyll config
+markdown: kramdown
+highlighter: rouge
+kramdown:
+    input: GFM
+permalink: /:year/:month/:title
+paginate: 5
+paginate_path: "page:num"
 
-# needed for travis-ci build
-exclude: [vendor]
+# Build config
+sass:
+    compressed: true
+gems: [jekyll-paginate, jekyll-gist]
