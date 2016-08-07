@@ -162,20 +162,45 @@ section.post:not(:last-child) {
     font-size: 20px;
 }
 
+blockquote {
+    margin: 0px;
+    padding: 0 1em;
+    color: #777;
+    border-left: 0.25em solid #A2DED0;
+    margin-bottom: 2.5rem;
+
+    >:last-child { margin-bottom: 0px}
+	>:first-child { margin-top: 0px}
+}
+
 .img-right {
-    width: 33%;
+    width: 40%;
     float: right;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-bottom: 4%;
     @media #{$small-media} {
-        width: 50%;
+        width: 100%;
+        margin: 20px 0px 50px;
+        padding: 20px;
+        box-sizing: border-box;
     }
 }
 
 .img-left {
-    width: 33%;
+    width: 40%;
     float: left;
-    margin-right: 10%;
+    margin-right: 5%;
+    margin-bottom: 4%;
     @media #{$small-media} {
-        width: 50%;
+        width: 100%;
+        margin: 20px 0px 50px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.blogpost {
+    h2, h3, h4, h5, h6, .small-title {
+        padding-top: 10px
     }
 }
