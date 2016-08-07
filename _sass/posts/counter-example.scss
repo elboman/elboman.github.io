@@ -1,0 +1,18 @@
+$small-media: "screen and (max-width: 600px)";
+$medium-media: "screen and (max-width: 900px)";
+
+#counter-example {
+	margin-top: 40px;
+}
+
+.component-lifecycle {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0px 110px;
+	@media #{$medium-media} {
+		padding: 0px 50px;
+	}
+	@media #{$small-media} {
+		padding: 0px;
+	}
+}
