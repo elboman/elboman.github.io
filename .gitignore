@@ -4,6 +4,7 @@
 # Jekyll build
 /_site/
 .jekyll-metadata
+.sass-cache/
 Gemfile.lock
 
 # webstorm
@@ -11,3 +12,4 @@ Gemfile.lock
 
 # others
 *.swp
+
