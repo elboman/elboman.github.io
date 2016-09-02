@@ -49,8 +49,18 @@ nav > ul {
     }
 }
 
+ul li {
+  margin-bottom: 0.3rem;
+}
+
 footer {
     margin-top: 20px;
+}
+
+blockquote p {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .small-title, h2, h3, h4, h5, h6 {
@@ -58,6 +68,10 @@ footer {
     font-size: 1.4rem;
     letter-spacing: .2rem;
     font-weight: 600;
+
+    code {
+      text-transform: none;
+    }
 }
 
 h2 {

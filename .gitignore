@@ -13,3 +13,5 @@ Gemfile.lock
 # others
 *.swp
 
+# vscode
+.vscode
