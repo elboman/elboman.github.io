@@ -6,7 +6,12 @@ body {
     padding-top: 60px;
     background-color: $bg-color;
     color: #111;
-    font-size: 1.7em;
+    font: 1.8rem/1.5 Lora,Merriweather,Georgia,serif
+}
+
+h1, h2, h3, h4, h5, h6, .small-title, h1 a, h2 a, h3 a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400 !important;
 }
 
 a, a:visited, a:hover {
@@ -81,6 +86,11 @@ ul.related-post {
     padding-left: 20px;
     position: relative;
     margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    a {
+      font-weight: 400 !important;
+      letter-spacing: 0.1rem;
+    }
   }
   li:before {
     content: ">";
@@ -142,11 +152,13 @@ $avatar-size: 140px;
 }
 
 section.post:not(:last-child) {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .post__header h3 {
-    line-height: 4rem;
+    line-height: 3rem;
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
 }
 
 .post__meta {
