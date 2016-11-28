@@ -2,38 +2,47 @@
 layout: layout
 ---
 
-<div class="post-wrapper">
-	<div class="blog-post">
-		<h1 class="center">
-			<strong><a href="{{ page.url }}">{{ page.title }}</a></strong>
-			</h1>
-	</div>
-	<div class="blog-title">
-		<h5 class="center"><small>
-		{{ page.date | date: "%B %e, %Y" }}
-			&nbsp;&nbsp;
-		</small></h5>
-	</div>
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<div class="blogpost">
-				{{ content }}
-				 <hr>
-				 <div class="related-posts">
-					 <h5>Related Posts</h5>
-					 <ul class="related-post">
-					 	{% for post in site.related_posts limit:3 %}
-							<li><strong><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></strong><br><small>{{ post.date | date: "%B %d, %Y" }}</small></li>
-						{% endfor %}
-					 </ul>					
-				 </div>
-			</div>
-		</div>
-	</div>
-	{% include disqus.html %}
-</div>
+<article class="post-wrapper pa2 pa3-m pa4-l cf">
+  <div class="w-100 w-75-l center">
+    <header class="mb4">
+      <h1 class="f3 f2-m f1-l mt2 mb3 b measure">{{ page.title }}</h1>
+      <b class="f5 f4-m f3-l">{{ page.date | date: "%m.%d.%Y" }}</b>
+    </header>
+    <section class="lh-copy f4 mt0 mb0 athelas">
+      <div class="relative">
+        {{ content }}
+      </div>
+    </section>
+  </div>
+  <div class="w-100 w-75-l center">
+    <footer>
+      <div class="related-posts">
+        <h5 class="f4 mb2">Related Posts</h5>
+        <ul class="related-post list ml0 pl0 cf mv0">
+         {% for post in site.related_posts limit:3 %}
+           <li class="fl w-100 w-third-ns pointer post__item">
+             <div class="pa3 pa4-l">
+               <b>{{ post.date | date: "%m.%d.%Y" }}</b>
+               <a href="{{ site.baseurl }}{{ post.url }}" class="link mid-gray f4 b measure">
+                 <h4 class="mt0 mb0">{{ post.title }}</h4>
+               </a>
+             </div>
+           </li>
+         {% endfor %}
+        </ul>
+      </div>
+      <div class="disqus">
+        <h5 class="f4 mb4">Comments</h5>
+        <div class="">
+          {% include disqus.html %}
+        </div>
+      </div>
+    </footer>
+  </div>
+</article>
+
 {% for js in page.jsinclude %}
-<script>
-	{% include {{js}} %}
-</script>
+  <script>
+  	{% include {{js}} %}
+  </script>
 {% endfor %}

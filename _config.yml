@@ -19,7 +19,7 @@ highlighter: rouge
 kramdown:
     input: GFM
 permalink: /:year/:month/:title
-paginate: 5
+paginate: 6
 paginate_path: "page:num"
 
 # Build config
