@@ -1,71 +1,61 @@
 ---
 layout: home
 ---
-<div class="posts">
-	{% for post in paginator.posts %}
-	<section class="post">
-		<header class="post__header">
-			<h3 class="center">
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</h3>
-			<span class="post__meta">
-				Posted on {{ post.date | date: "%b %-d, %Y" }} by <a href="//twitter.com/elboman" target="_blank">Marco Botto</a>
-			</span>
-		</header>
-		<div class="post__content center">
-			<p>
-				{{ post.content | strip_html | truncatewords: 35 }}
-			</p>
-		</div>
-		<div class="post__button center">
-			<a href="{{ post.url }}" class="button" title="Read {{ post.title }}">
-				Continue reading
-				<img class="continue-reading-icon" src="{{ site.baseurl }}/static/img/icons/next.svg" alt="{{ post.title }}">
-			</a>
-		</div>
-	</section>
-	{% endfor %}
-</div>
+<ul class="list ml0 pl0 mt0 mb0 cf">
+  {% for post in paginator.posts %}
+    <a href="{{ post.url }}" class="mid-gray">
+      <li class="fl w-100 w-50-l post__item pointer b--black-30">
+        <div class="pa4">
+          <b>{{ post.date | date: "%m.%d.%Y" }}</b>
+          <h3 class="f4 f3-ns mt2 mb3 b measure">{{ post.title }}</h3>
+          <blockquote class="ph0 pb2 mh0 mt0 mb0">
+            <p class="lh-copy measure f4 mt0 mb0 athelas">{{ post.content | strip_html | truncatewords: 35 }}</p>
+          </blockquote>
+        </div>
+      </li>
+    </a>
+  {% endfor %}
+</ul>
 
 {% if paginator.total_pages > 0 %}
-<div class="pagination">
-	<ul>
-		<li id="pagination-prev">
+<div class="pagination f3 silver mt4 mb4 tc">
+	<ul class="list ml0 pl0 tc fw8 dib ma0">
+		<li id="pagination-prev" class="dib w2 pagination-icon">
 			{% if paginator.previous_page %}
-			<a class="pagination-button" href="{{ paginator.previous_page_path }}">
-				<img src="{{ site.baseurl }}/static/img/icons/prev.svg" alt="">
+			<a class="pagination-button link mid-gray" href="{{ paginator.previous_page_path }}">
+				{% include prev_icon.html %}
 			</a>
 			{% else %}
 			<span>
-				<img src="{{ site.baseurl }}/static/img/icons/prev.svg" alt="">
+				{% include prev_icon.html %}
 			</span>
 			{% endif %}
 		</li>
 
 		{% for page in (1..paginator.total_pages) %}
-		{% if page == paginator.page %}
-		<li>
-			<span id="current-page">{{ page }}</span>
-		</li>
-		{% elsif page == 1 %}
-		<li>
-			<a href="/">{{ page }}</a>
-		</li>
-		{% else %}
-		<li>
-			<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-		</li>
-		{% endif %}
+  		{% if page == paginator.page %}
+  		<li class="dib ml1 mr1 current pagination-number">
+  			<span id="current-page">{{ page }}</span>
+  		</li>
+  		{% elsif page == 1 %}
+  		<li class="dib ml1 mr1 pagination-number">
+  			<a href="/" class="link mid-gray">{{ page }}</a>
+  		</li>
+  		{% else %}
+  		<li class="dib ml1 mr1 pagination-number">
+  			<a class="link mid-gray" href="{{site.baseurl}}/{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+  		</li>
+  		{% endif %}
 		{% endfor %}
 
-		<li id="pagination-next">
+		<li id="pagination-next" class="dib w2 pagination-icon">
 			{% if paginator.next_page %}
-			<a class="pagination-button" href="{{ paginator.next_page_path }}">
-				<img src="{{ site.baseurl }}/static/img/icons/next.svg" alt="">
+			<a class="pagination-button link mid-gray" href="{{ paginator.next_page_path }}">
+				{% include next_icon.html %}
 			</a>
 			{% else %}
 			<span>
-				<img src="{{ site.baseurl }}/static/img/icons/next.svg" alt="">
+				{% include next_icon.html %}
 			</span>
 			{% endif %}
 		</li>
